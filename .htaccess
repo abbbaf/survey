@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteRule ^(game|website)$ index.php?page=$1 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /index.php [R=301]
+AddType application/x-httpd-php .js
+
